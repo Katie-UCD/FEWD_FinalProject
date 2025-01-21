@@ -1,0 +1,192 @@
+
+:root{
+	--orange: #d97a43;
+	--brown: #401717;
+	--purple: #ccbbf2;
+	--cream: #f2e0dc;
+}
+body{
+	background-color: var(--cream);
+}
+
+/*Typogrphy start */
+h1{
+	font-family: "Katibeh", serif;
+	color: var(--orange);
+	font-size: 6em;
+	text-align: left;
+	line-height: 0.8em;
+	position: relative;
+	top: 20px;
+	
+}
+h2 {
+	font-family: "oswald";
+	font-size: 2em;
+	text-align: left;
+	color: var(--brown);
+}
+
+h3{
+	font-family: "Katibeh", serif;
+	color: var(--brown);
+	font-size: 5.5em;
+	text-align: left;
+	line-height: 0.8em;
+	position: relative;
+	top: 20px;
+}
+
+h4{
+	font-family: "Katibeh", serif;
+	color: var(--orange);
+	font-size: 3em;
+	text-align: left;
+	line-height: 0.8em;
+	position: relative;
+	top: 20px;
+}
+h5{
+	font-family: "oswald";
+	font-size: 3em;
+	text-align: left;
+	color: var(--orange);
+	font-weight: 500;
+
+}
+h6{
+	font-family: "Katibeh", serif;
+	color: var(--brown);
+	font-size: 2em;
+	text-align: left;
+	line-height: 0.8em;
+}
+
+.horoscopeDes{
+	font-family: "oswald";
+	text-align: left;
+	color: var(--brown);
+	font-weight: 500;
+	margin: 0;
+}
+
+p{
+	font-family: "oswald";
+	font-weight: lighter;
+	font-size: 1em;
+	text-align: left;
+	color: var(--brown);
+}
+
+/*typograpgy end */
+
+/* header start */
+.sectionHeader{
+	padding: 50px;
+	background-color: var(--purple);
+}
+
+
+.tagline {
+	font-family: "oswald";
+	font-weight: 500;
+	color: var(--brown);
+	text-align: center;
+	font-size: 1em;
+	padding: 20px;
+}
+
+/*header end */
+
+/* Hide/show horoscope detail section */
+.selectedHoroscope{
+	display: none;
+}
+
+
+/*Tarot start*/
+
+.tarotSection{
+	padding: 50px;
+}
+	
+.tarotBtn{
+	color: var(--brown);
+	border-color: var(--brown);
+	display: inline-block;
+	font-family: "oswald";
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid;
+	padding: .375em .75em;
+	border-radius: .25em;
+	transition: color .15s ease-in-out,var(--brown) .15s ease-in-out,var(--brown) .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.tarotBtn:hover,.tarotBtn:active {
+    color: #fff;
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+
+/*Tarot end */
+
+/*Numerology start*/
+
+#datePicker{
+	color: var(--brown);
+	border-color: var(--brown);
+	display: inline-block;
+	font-family: "oswald";
+	font-size: 2em;
+	font-weight: 400;
+	line-height: 2;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid;
+	padding: .5em .75em;
+	border-radius: .25em;
+
+	
+}
+
+.datePicker{
+	max-width: 50%;
+	margin: 0 auto;
+}
+label{
+	font-family: "oswald";
+	font-weight: 400;
+	font-size: 1em;
+	text-align: left;
+	color: var(--brown);
+	padding: 10px;
+}
+
+.results{
+	margin: 50px;
+}
+
+.results h4{
+	text-align: center;
+	font-size: 14em;
+}
+.results h2{
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.results p{
+	text-align: center;
+}
+
+
+/*Numerology end*/

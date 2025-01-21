@@ -1,0 +1,55 @@
+---
+import firstQrtr from "../assets/moon/firstQrtr.png";
+---
+
+<!--Nav bar start -->
+	<nav class="navbar navbar-expand-lg navbar-light py-0 sticky-top">
+		<div class="container">
+			<a class="nav-link" href="numerology">Numerology</a>
+			<a class="nav-link active logo" aria-current="page" href="/">Daily Divination</a>
+			<a class="nav-link" href="moonPhases">Moon Phases</a>
+		</div>
+	  </nav>
+<!--Nav end -->	
+
+<!--Header start -->	
+	  <div class="container text-center header">
+		<div class="row">
+		  <div class="col">
+			<img src={firstQrtr.src} alt="Current Moon Phase" width="200px"/>
+		  </div>
+		  <div class="col-6 align-self-center">
+			<h1>First Quarter</h1>
+			<h2>January 19, 2025</h2>
+		  </div>
+		</div>
+	  </div>
+<!--Header end -->
+
+
+<style>
+	
+	/* Nav CSS */
+	nav-link, a{
+		font-family: "Katibeh", serif;
+		color: var(--cream);
+		font-size: 1.5em;
+	}
+	
+	.logo {
+		color: var(--brown);
+		font-size: 3em;
+		position: relative;
+		top: 20px;
+	}
+	.navbar {
+		background-color: var(--orange);
+	}
+	
+	/* header css */
+	.header{
+		padding: 50px;
+	}
+	
+	
+	</style>

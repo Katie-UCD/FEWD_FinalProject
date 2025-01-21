@@ -1,0 +1,37 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+   imagePath: string;
+   altText: string;
+   name: string;
+   description: string;
+   element: string;
+   planet: string
+   dates: string
+}
+const { imagePath, altText, name, description, element, planet, dates} = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/horoscopes/*.{jpeg,jpg,png,gif,svg}');
+
+// Match the file name with the glob
+const resolvedImage = images[`/src/assets/horoscopes/${imagePath}`];
+if (!resolvedImage) {
+    throw new Error(`Image "${imagePath}" does not exist in "/src/assets/horoscopes".`);
+}
+---
+
+        <div class="col">
+            <Image src={resolvedImage()} alt={altText} />
+        </div>
+        <div class="col selectedHoroscope">
+            <h5>{name}</h5>
+            <h6>{dates}</h6>
+            <p class="horoscopeDes"> Element: {element}</p>
+            <p class="horoscopeDes"> Planet: {planet}</p>
+            <p>{description}</p>
+        </div>
+
+
+

@@ -1,0 +1,41 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+   imagePath: string;
+   altText: string;
+   name: string;
+   description: string;
+   width:number;
+}
+const { imagePath, altText, name, description, width } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.{jpeg,jpg,png,gif}');
+
+// Match the file name with the glob
+const resolvedImage = images[`/src/assets/moon/${imagePath}`];
+if (!resolvedImage) {
+    throw new Error(`Image "${imagePath}" does not exist in "/src/assets/moon".`);
+}
+---
+<div class="container">
+    <div class="row">
+        <div class="col align-self-center">
+            <Image src={resolvedImage()} alt={altText} width={width} />
+        </div>
+        <div class="col align-self-center">
+            <h5>{name}</h5>
+            <p>{description}</p>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+<style>
+    .container{
+        padding: 50px;
+    }
+
+</style>
