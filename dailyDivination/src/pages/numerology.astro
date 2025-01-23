@@ -26,16 +26,17 @@ import Numbers from '../components/Numbers.astro';
               <h3>Numerology</h3>
               <p>In numerology, life path numbers serve as a symbolic map of an individual’s journey through life, offering insight into their personality, challenges, and purpose. Derived from one’s birthdate, these numbers are believed to reflect the vibrational energy of the universe at the moment of birth. Each life path number carries its own unique essence, representing distinct traits, strengths, and areas of growth. Together, they weave a tapestry of potential, guiding individuals toward self-discovery and fulfillment. Whether rooted in leadership, creativity, spirituality, or service, these numbers reveal the cycles of growth and transformation that define the human experience, offering a lens through which to navigate life’s phases with clarity and purpose.</p>
             </div>
-           <div class="col ">
+           <div class="colcol-sm-6 ">
               <div class=" datePicker">
-              <label for="datePicker">Calculate your Life Path Number</label>
+              <label for="datePicker">Enter your Birthdate</label>
               <input id="datePicker" class="form-control" type="date" /> 
+              <button type="button" class="tarotBtn" id="calculateBtn">Calculate your Life Path Number</button>
             </div>
            </div> 
-           <div class="col-sm  results">
-              <h2>Your Result:</h2>
-              <h4> 11</h4>
-              <p>Life Path 11 individuals are highly intuitive, spiritual, and inspiring. They are dreamers with a unique ability to connect to higher realms of consciousness. Often viewed as idealists, they can channel their heightened sensitivity into creating profound works or leading movements. Challenges include managing intense emotions or feeling overwhelmed. When balanced, they are luminous guides and sources of inspiration.</p>
+           <div class="col-sm-6 results">
+              <h2 id="resultHeader"></h2>
+              <h4 id="result"> </h4>
+              <p id="resultDescription"></p>
            </div>
       </div>
 	  </div>
@@ -104,6 +105,103 @@ import Numbers from '../components/Numbers.astro';
   .container{
     margin-top: 50px;
   }
+
+  .tarotBtn{
+    margin: 10px 0px;
+  }
+
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const calculateBtn = document.getElementById('calculateBtn') as HTMLButtonElement;
+  const datePicker = document.getElementById('datePicker') as HTMLInputElement;
+
+    // Ensure elements are found
+    if (!calculateBtn || !datePicker) {
+        console.error('Either the calculate button or date picker is missing.');
+        return;
+    }
+
+    calculateBtn.addEventListener('click', function () {
+        const dateVal = datePicker.value; // Get the value of the date picker
+        const resultDiv = document.getElementById('result');
+
+        if (dateVal) {
+            console.log('Selected date:', dateVal); // Logs the selected date in 'YYYY-MM-DD' format
+
+            // Calculation (sum of digits of the date)
+            const lifePathNumber = calculateLifePathNumber(dateVal);
+            if (resultDiv) {
+                resultDiv.innerHTML = `${lifePathNumber}`;
+            } else {
+                console.error("Result div element not found.");
+            }
+        } else {
+            console.warn('No date selected.');
+            const resultHeader = document.getElementById('resultHeader');
+            if (resultHeader) {
+                resultHeader.innerHTML = "Please select a date";
+            } else {
+                console.error("Result header element not found.");
+            }
+        }
+    });
+
+    function calculateLifePathNumber(dateString: string) {
+        const digits = dateString.replace(/-/g, '').split('').map(Number);
+
+        // Reduce digits to a single number (except 11, 22, 33 for numerology)
+        let sum = digits.reduce((a: any, b: any) => a + b, 0);
+        while (sum > 9 && ![11, 22, 33].includes(sum)) {
+            sum = sum.toString().split('').map(Number).reduce((a: any, b: any) => a + b, 0);
+        }
+        lifePathDescription(sum);
+        return sum;
+    }
+
+    function lifePathDescription(sum: number) {
+        const resultHeader = document.getElementById('resultHeader');
+        const resultPara = document.getElementById('resultDescription');
+
+        if (resultHeader) {
+            resultHeader.innerHTML = "Your Life Path Number is:";
+        } else {
+            console.error("Result header element not found.");
+        }
+
+        if (resultPara) {
+            if (sum === 1) {
+                resultPara.innerHTML = "Those with a Life Path 1 are natural leaders who thrive on independence and innovation. They are ambitious, self-reliant, and driven to succeed, often blazing trails where others fear to tread. Challenges for a 1 often include overcoming self-doubt or avoiding selfishness. When balanced, they are inspiring pioneers who motivate others with their determination and courage.";
+            } else if (sum === 2) {
+                resultPara.innerHTML = "Life Path 2 individuals are deeply empathetic, cooperative, and attuned to others’ needs. They are peacekeepers who excel in building partnerships and fostering harmony. While their sensitivity and intuition are their strengths, they may struggle with indecisiveness or over-dependence on others. At their best, they bring people together with grace and understanding, creating strong, loving bonds.";
+            } else if (sum === 3) {
+                resultPara.innerHTML = "Life Path 2 individuals are deeply empathetic, cooperative, and attuned to others’ needs. They are peacekeepers who excel in building partnerships and fostering harmony. While their sensitivity and intuition are their strengths, they may struggle with indecisiveness or over-dependence on others. At their best, they bring people together with grace and understanding, creating strong, loving bonds.";
+            } else if (sum === 4) {
+                resultPara.innerHTML = "Life Path 4 individuals are grounded, disciplined, and practical, often excelling at creating stability and structure. They are hard-working and thrive on a strong foundation, whether in relationships, career, or personal goals. However, their focus on security can sometimes lead to rigidity or fear of change. When balanced, they are dependable and trustworthy, capable of creating lasting legacies.";
+            } else if (sum === 5) {
+                resultPara.innerHTML = "Life Path 5 is characterised by a love of freedom, adaptability, and adventure. These individuals are often curious and thrive on variety and new experiences. They excel at embracing change but may struggle with commitment or restlessness. At their best, they inspire others to break free from limitations and live life to the fullest.";
+            } else if (sum === 6) {
+                resultPara.innerHTML = "Life Path 6 individuals are compassionate, responsible, and deeply caring. They are natural caregivers who find fulfilment in supporting and nurturing others. Their strong sense of duty and justice makes them excellent friends and family members. However, they may face challenges with over-sacrificing or being overly controlling. When balanced, they create harmony and inspire love and kindness.";
+            } else if (sum === 7) {
+                resultPara.innerHTML = "Life Path 7 is associated with deep introspection, spirituality, and intellectual curiosity. These individuals are often seekers of truth, drawn to study, philosophy, or mysticism. They can be reserved or introverted but have a rich inner life. Challenges may include isolation or skepticism. At their best, they bring wisdom and insight, helping others see life’s deeper meaning.";
+            } else if (sum === 8) {
+                resultPara.innerHTML = "Those with a Life Path 8 are ambitious, authoritative, and business-savvy. They have a natural talent for managing material resources and achieving success. Their drive and determination are unmatched, but they may struggle with work-life balance or the temptation of power. When balanced, they are inspiring leaders who use their influence for the greater good.";
+            } else if (sum === 9) {
+                resultPara.innerHTML = "Life Path 9 individuals are compassionate, idealistic, and deeply connected to humanity. They are visionaries who seek to make the world a better place through service and generosity. They often possess wisdom and a global perspective but may struggle with letting go of the past or feeling misunderstood. At their best, they are selfless and transformative, inspiring positive change.";
+            } else if (sum === 11) {
+                resultPara.innerHTML = "Life Path 11 individuals are highly intuitive, spiritual, and inspiring. They are dreamers with a unique ability to connect to higher realms of consciousness. Often viewed as idealists, they can channel their heightened sensitivity into creating profound works or leading movements. Challenges include managing intense emotions or feeling overwhelmed. When balanced, they are luminous guides and sources of inspiration.";
+            } else if (sum === 22) {
+                resultPara.innerHTML = "Life Path 22 is often considered the most powerful number, combining practicality with vision. These individuals are ambitious dreamers who can turn grand ideas into reality. They excel in leadership and creating enduring structures, whether physical, social, or spiritual. Their challenge is to harness their immense potential without being overwhelmed. When aligned, they achieve remarkable accomplishments that benefit humanity.";
+            } else {
+                resultPara.innerHTML = "Life Path 33 individuals are rare and are known for their selfless service and unconditional love. They are deeply spiritual and compassionate, often called to heal and guide others. With their heightened empathy and creative energy, they can be profound teachers and role models. Their challenge is to balance personal needs with their calling. At their best, they inspire transformation and healing on a global scale.";
+            }
+        } else {
+            console.error("Result description element not found.");
+        }
+    }
+});
+
+</script>
 
 
