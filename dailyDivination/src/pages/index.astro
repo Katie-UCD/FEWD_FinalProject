@@ -2,6 +2,11 @@
 import Header from "../components/Header.astro"
 import "../styles/main.css"
 import HoroscopePage from "../components/HoroscopePage.astro"
+
+const pathname = new URL(Astro.request.url).pathname;
+console.log(pathname); // This works in both static and dynamic environments
+
+
 ---
 
 <!DOCTYPE html>
@@ -35,8 +40,11 @@ import HoroscopePage from "../components/HoroscopePage.astro"
 			</div>
 		</div>
 		<div class="tarotResults">
-			
+
 		</div>
 	</div>	
 </body>
 </html>
+
+
+  
