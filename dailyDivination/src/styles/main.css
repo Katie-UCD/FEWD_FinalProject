@@ -149,13 +149,17 @@ p{
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
-	cursor: pointer;
+	cursor: text;
 	background-color: transparent;
 	border: 2px solid;
 	padding: .5em .75em;
 	border-radius: .25em;
-
 	
+	
+}
+
+#datePicker:focus{
+	background-color: var(--cream);
 }
 
 .datePicker{
@@ -172,12 +176,14 @@ label{
 }
 
 .results{
-	margin: 50px;
+	margin: 50px auto;
 }
 
 .results h4{
 	text-align: center;
-	font-size: 14em;
+	font-size: 18em;
+	margin-top: 50px;
+	
 }
 .results h2{
 	text-align: center;
@@ -186,6 +192,9 @@ label{
 
 .results p{
 	text-align: center;
+	position: relative;
+	top: -50px; 
+
 }
 
 
