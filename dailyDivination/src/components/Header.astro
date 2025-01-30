@@ -22,7 +22,7 @@ function getImageForMoonPhase(phase: number): string {
 <nav class="navbar navbar-expand-lg navbar-light py-0 sticky-top">
     <div class="container">
 		<a class="nav-link" id="moonPhasePage" href="moonPhases">Moon Phases</a>
-        <a class="nav-link  logo" aria-current="page" href="/">Daily Divination</a>
+        <a class="nav-link  logo" id="logo" aria-current="page" href="/">Daily Divination</a>
 		<a class="nav-link" id="numerologyPage" href="numerology">Numerology</a>
 
     </div>
@@ -71,9 +71,9 @@ function getImageForMoonPhase(phase: number): string {
 	.active{
 		text-decoration: underline var(--brown);
 		color: var(--brown)
-	
-		
 	}
+
+	
 </style>
 
 <script>
@@ -156,12 +156,16 @@ const pathname = window.location.pathname;
 
 	if (pathname === "/moonPhases"){
 		const moonPageLink = document.getElementById("moonPhasePage");
+		if(moonPageLink){
 		moonPageLink.classList.add("active");
+		}
 	
 	}
 	else if (pathname === "/numerology"){
 		const numerologyPageLink = document.getElementById("numerologyPage");
+		if(numerologyPageLink){
 		numerologyPageLink.classList.add("active");
+		}
 	}
 }
 

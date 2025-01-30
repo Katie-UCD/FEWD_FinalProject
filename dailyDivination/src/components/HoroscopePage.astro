@@ -11,134 +11,177 @@ import Horoscope from "../components/Horoscope.astro"
  <!--Dynamtic lodin of horoscope info -->       
         <div class="row gy-3 row-cols-6">
             <Horoscope
-            imagePath="aires.svg";
-               altText="Aires";
-               name ="Aires";
-               description="Description";
-               element= "Fire";
+               dataName="Aires"
+               imagePath="aires.svg"
+               altText="Aires"
+               name ="Aires"
+               description="Description"
+               element= "Fire"
               planet= "Mars"
               dates = "March 21 – April 19"
             />
             
             <Horoscope
-            imagePath="taurus.svg";
-               altText="Taurus";
-               name ="Taurus";
-               description="Description";
-               element= "Earth";
+               dataName="Taurus"
+               imagePath="taurus.svg"
+               altText="Taurus"
+               name ="Taurus"
+               description="Description"
+               element= "Earth"
               planet= "Venus"
               dates = "April 20 – May 20"
             />
 
             <Horoscope
-            imagePath="gemini.svg";
-               altText="Gemini";
-               name ="Gemini";
-               description="Description";
-               element= "Air";
+               dataName="Gemini"
+               imagePath="gemini.svg"
+               altText="Gemini"
+               name ="Gemini"
+               description="Description"
+               element= "Air"
               planet= "Mercury"
               dates = "May 21 – June 20"
             />
 
             <Horoscope
-            imagePath="cancer.svg";
-               altText="Cancer";
-               name ="Cancer";
-               description="Description";
-               element= "Water";
+               dataName="Cancer"
+               imagePath="cancer.svg"
+               altText="Cancer"
+               name ="Cancer"
+               description="Description"
+               element= "Water"
               planet= "Moon"
               dates = "June 21 – July 22"
             />
 
             <Horoscope
-            imagePath="leo.svg";
-               altText="Leo";
-               name ="Leo";
-               description="Description";
-               element= "Fire";
+               dataName="Leo"
+               imagePath="leo.svg"
+               altText="Leo"
+               name ="Leo"
+               description="Description"
+               element= "Fire"
               planet= "Sun"
               dates = "July 23 – August 22"
             />
 
             <Horoscope
-            imagePath="virgo.svg";
-               altText="Virgo";
-               name ="Virgo";
-               description="Description";
-               element= "Earth";
+               dataName="Virgo"
+               imagePath="virgo.svg"
+               altText="Virgo"
+               name ="Virgo"
+               description="Description"
+               element= "Earth"
               planet= "Mercury"
               dates = "August 23 – September 22"
             />
         
             <Horoscope
-            imagePath="libra.svg";
-               altText="Libra";
-               name ="Libra";
-               description="Description";
-               element= "Earth";
+                dataName="Libra"
+               imagePath="libra.svg"
+               altText="Libra"
+               name ="Libra"
+               description="Description"
+               element= "Air"
               planet= "Venus"
               dates = "September 23 – October 22"
             />
 
             <Horoscope
-            imagePath="scorpio.svg";
-               altText="Scorpio";
-               name ="Scorpio";
-               description="Description";
-               element= "Water";
+                dataName="Scorpio"
+                imagePath="scorpio.svg"
+               altText="Scorpio"
+               name ="Scorpio"
+               description="Description"
+               element= "Water"
               planet= "Mars"
               dates = "October 23 – November 21"
             />
 
             <Horoscope
-            imagePath="sagittarius.svg";
-               altText="Sagittarius";
-               name ="Sagittarius";
-               description="Description";
-               element= "Fire";
+               dataName="Sagittarius"
+               imagePath="sagittarius.svg"
+               altText="Sagittarius"
+               name ="Sagittarius"
+               description="Description"
+               element= "Fire"
               planet= "Jupiter"
               dates = "November 22 – December 21"
             />
 
-            <Horoscope
-            imagePath="capricorn.svg";
-               altText="Capricorn";
-               name ="Capricorn";
-               description="Description";
-               element= "Earth";
+            <Horoscope 
+                dataName="Capricorn"
+               imagePath="capricorn.svg"
+               altText="Capricorn"
+               name ="Capricorn"
+               description="Description"
+               element= "Earth"
               planet= "Saturn"
               dates = "December 22 – January 19"
             />
 
             <Horoscope
-            imagePath="aquarius.svg";
-               altText="Aquarius";
-               name ="Aquarius";
-               description="Description";
-               element= "Air";
-              planet= "Sun"
+                dataName="Aquarius"
+               imagePath="aquarius.svg"
+               altText="Aquarius"
+               name ="Aquarius"
+               description="Description"
+               element= "Air"
+              planet= "Neptune"
               dates = "January 20 – February 18"
             />
 
-            <Horoscope
-            imagePath="pisces.svg";
-               altText="Pisces";
-               name ="Pisces";
-               description="Description";
-               element= "Water";
-              planet= "Jupiter"
+            <Horoscope 
+                dataName="Pices"
+                imagePath="pisces.svg"
+               altText="Pisces"
+               name ="Pisces"
+               description="Description"
+               element= "Water"
+              planet= "Neptune"
               dates = "February 19 – March 20"
             />
         </div>
       </div>
   </div>
 
-  <style>
-    /*make images responsive */
-    .col img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure it doesn't exceed its container */
-}
+ <script>
+   document.addEventListener('DOMContentLoaded', function () {
+        const horoscopeButtons = document.querySelectorAll('.horoscopeBtn');
+        const resultContainer = document.querySelector('#horoscopeResult');
 
-</style>
+        horoscopeButtons.forEach((button) => {
+            button.addEventListener('click', async () => {
+                // Remove "active" class from all .selectedHoroscope elements
+                document.querySelectorAll('.selectedHoroscope').forEach((el) => {
+                    el.classList.remove('activeHoroscope');
+                });
+
+                // Add "active" to the clicked button's selectedHoroscope
+                const selectedHoroscope = button.querySelector('.selectedHoroscope');
+                if (selectedHoroscope) {
+                    selectedHoroscope.classList.add('activeHoroscope');
+                }
+
+                // Get the zodiac sign from the button's data-name attribute
+                const sign = button.dataset.name;
+                const url = 'https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=Virgo&day=TODAY';
+
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+
+                    if (data.horoscope) {
+                        // Find and update the correct horoscope description
+                        selectedHoroscope.querySelector(".horoscopeDes").innerHTML = data.horoscope;
+                    } else {
+                        selectedHoroscope.querySelector(".horoscopeDes").innerHTML = "Failed to load horoscope.";
+                    }
+                } catch (error) {
+                    console.error("Error fetching horoscope:", error);
+                    selectedHoroscope.querySelector(".horoscopeDes").innerHTML = "Error fetching data.";
+                }
+            });
+        });
+    });
+</script>

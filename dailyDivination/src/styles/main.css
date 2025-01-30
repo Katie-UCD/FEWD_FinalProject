@@ -98,10 +98,28 @@ p{
 
 /*header end */
 
+/* Horoscope Start
+
 /* Hide/show horoscope detail section */
 .selectedHoroscope{
 	display: none;
 }
+
+.activeHoroscope{
+	display: block;
+}
+.horoscopeBtn{
+	cursor: pointer;
+	background-color: transparent;
+	border: 0px;
+    
+}
+
+.horoscopeBtn:hover{
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+/* Horoscope end
 
 
 /*Tarot start*/
@@ -132,6 +150,7 @@ p{
     color: #fff;
     background-color: var(--brown);
     border-color: var(--brown);
+	
 }
 
 /*Tarot end */

@@ -10,8 +10,10 @@ interface Props {
    element: string;
    planet: string
    dates: string
+
+   dataName: string
 }
-const { imagePath, altText, name, description, element, planet, dates} = Astro.props;
+const { imagePath, altText, name, description, element, planet, dates, dataName } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/horoscopes/*.{jpeg,jpg,png,gif,svg}');
 
@@ -21,17 +23,30 @@ if (!resolvedImage) {
     throw new Error(`Image "${imagePath}" does not exist in "/src/assets/horoscopes".`);
 }
 ---
-
+<button class="horoscopeBtn horoscope-item" data-name={dataName}>
         <div class="col">
             <Image src={resolvedImage()} alt={altText} />
         </div>
-        <div class="col selectedHoroscope">
-            <h5>{name}</h5>
-            <h6>{dates}</h6>
-            <p class="horoscopeDes"> Element: {element}</p>
-            <p class="horoscopeDes"> Planet: {planet}</p>
-            <p>{description}</p>
-        </div>
+       
+            <div class="col selectedHoroscope">
+                <h5>{name}</h5>
+                <h6>{dates}</h6>
+                <p class="horoscopeDes"> Element: {element}</p>
+                <p class="horoscopeDes"> Planet: {planet}</p>
+                <p class="horoscopeReturn">{description}</p>
+            </div>
+    </button>
 
 
 
+
+<style>
+/*make images responsive */
+     .col img{ 
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+}
+
+
+</style>
