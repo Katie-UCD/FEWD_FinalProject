@@ -22,18 +22,30 @@ const resolvedImage = images[`/src/assets/horoscopes/${imagePath}`];
 if (!resolvedImage) {
     throw new Error(`Image "${imagePath}" does not exist in "/src/assets/horoscopes".`);
 }
+
+const sign = `${name}`;  // You can make this dynamic later
+let horoscope = "Loading your horoscope..."; // Default text
+try {
+   const response = await fetch(`https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=${sign}&day=TODAY`);
+   const data = await response.json();
+   horoscope = data.data.horoscope_data; // Actual horoscope data
+} catch (error) {
+   horoscope = "Sorry, we couldn't fetch your horoscope right now."; // Error message if fetch fails
+}
+
+
 ---
 <button class="horoscopeBtn horoscope-item" data-name={dataName}>
         <div class="col">
             <Image src={resolvedImage()} alt={altText} />
         </div>
        
-            <div class="col selectedHoroscope">
+            <div class=" selectedHoroscope">
                 <h5>{name}</h5>
                 <h6>{dates}</h6>
                 <p class="horoscopeDes"> Element: {element}</p>
                 <p class="horoscopeDes"> Planet: {planet}</p>
-                <p class="horoscopeReturn">{description}</p>
+                <p class="horoscopeReturn">{horoscope}</p>
             </div>
     </button>
 
