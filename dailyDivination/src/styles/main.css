@@ -153,6 +153,9 @@ p{
 	
 }
 
+.reversed img{
+	transform: rotate(180deg);
+}
 /*Tarot end */
 
 /*Numerology start*/

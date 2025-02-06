@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro"
 import "../styles/main.css"
 import HoroscopePage from "../components/HoroscopePage.astro"
+import TarotPage from "../components/tarotPage.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
 console.log(pathname); // This works in both static and dynamic environments
@@ -28,22 +29,7 @@ console.log(pathname); // This works in both static and dynamic environments
 
 	
 	<HoroscopePage/>
-
-	<div class="container-fluid tarotSection">
-		<div class="container">
-			<h3>Tarot Reading</h3>
-			<div class="row">
-				<div class="col col-lg-2">
-					<button type="button" class="tarotBtn">Today's Card</button>
-				</div>
-				<div class="col col-lg-3">
-					<button type="button" class="tarotBtn">Three Card Reading</button>
-				</div>
-			</div>
-		</div>
-		<div class="tarotResults">
-
-		</div>
-	</div>	
+	<TarotPage/>
+	
 </body>
 </html>
