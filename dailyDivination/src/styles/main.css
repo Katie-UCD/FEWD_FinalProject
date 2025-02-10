@@ -59,7 +59,8 @@ h6{
 	color: var(--brown);
 	font-size: 2em;
 	text-align: left;
-	line-height: 0.8em;
+	margin-top: 10px;
+	
 }
 
 .horoscopeDes{

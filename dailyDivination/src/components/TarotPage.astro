@@ -2,7 +2,7 @@
     <div class="container">
         <h3>Tarot Reading</h3>
         <div class="row">
-            <div class="col col-lg-2">
+            <div class="col col-lg-2 buttons">
                 <button type="button" class="tarotBtn" id="todayBtn">Today's Card</button>
             </div>
             <div class="col col-lg-3">
@@ -10,90 +10,152 @@
             </div>
         </div>
     </div>
-    <div id="tarotResults" class="col-lg-3 col">
-
-    </div>
+    
+     <div class="container">    
+     
+         <div class="row justify-content-md-center">
+            <div id="tarotResults"></div>
+         </div>
+    </div>      
 </div>	
-<img src="https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/death.svg" class="reversedCard"/>
+
 
 
 
 <script>  
+interface TarotCard {
+    Img: string;
+    Name: string;
+    Description: string;
+    Reversed: boolean | string;
+}
+
 fetch('db.json')
-  .then(response => response.json()) // Parse JSON data
-  .then(data => {
-    // Get elements and explicitly cast their types
-    const todayBtn = document.getElementById('todayBtn') as HTMLButtonElement | null;
+  .then(response => response.json())
+  .then((data: { tarot: TarotCard[] }) => { 
+    const todayBtn = document.getElementById('todayBtn')as HTMLButtonElement | null;
+    const threeBtn = document.getElementById('threeBtn')as HTMLButtonElement | null;
     const tarotResults = document.getElementById('tarotResults') as HTMLDivElement | null;
 
-    // Ensure the elements exist before adding event listeners and appending
-    if (todayBtn && tarotResults) {
-        todayBtn.addEventListener('click', () => {
-             // Select a random tarot card from the data
-             const randomIndex = Math.floor(Math.random() * data.tarot.length);
-             const randomCard = data.tarot[randomIndex];
-
-             // Clear previous result
-             tarotResults.innerHTML = '';
-
-             // Create and append new elements for the random tarot card
-             const cardImage = document.createElement('img');
-             cardImage.src = randomCard.Img;
-             cardImage.alt = randomCard.Name;   
-
-             console.log('Image loaded');
-          
-             if (randomCard.Reversed === true || randomCard.Reversed === "true") {
-                cardImage.classList.add('reversedCard');
-                console.log('Class "reversedCard" added after delay');
-             } else {
-                console.log('Card is not reversed');
-            };
-          
-             tarotResults.appendChild(cardImage);
-
-        // Date
-        const today = new Date();
-        const day = today.getDate();
-        const year = today.getFullYear();
-        const monthNames = [
-          "January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December"
-        ];
-        const month = monthNames[today.getMonth()];
-        const formattedDate = `${day} ${month} ${year}`;
-        const dateDisplay = document.createElement('h6');
-        dateDisplay.textContent = formattedDate;
-        tarotResults.appendChild(dateDisplay);
-
-        // Name
-        const cardName = document.createElement('h5');
-        cardName.textContent = randomCard.Name;
-        tarotResults.appendChild(cardName);
-
-        // Description
-        const cardDescription = document.createElement('p');
-        cardDescription.textContent = randomCard.Description;
-        tarotResults.appendChild(cardDescription);
-      });
-    } else {
-        console.error("Missing elements: todayBtn or tarotResults.");
+    if (!todayBtn || !threeBtn || !tarotResults) {
+        console.error("Missing necessary elements.");
+        return;
     }
-  })
-  .catch(error => {
-        console.error('Error loading tarot data:', error);
-  });
+
+    function displaySingleCard(card: TarotCard) {
+     if (todayBtn && tarotResults) {    
+        tarotResults.innerHTML = '';  
+
+        const rowDiv = document.createElement('div');
+        rowDiv.classList.add('row', 'justify-content-center');
+
+        const colDiv = document.createElement('div');
+        colDiv.classList.add('col-md-4', 'text-center', 'card-wrapper');
+
+        const cardImage = document.createElement('img');
+        cardImage.src = card.Img;
+        cardImage.alt = card.Name;
+        cardImage.classList.add('img-fluid', 'tarot-card');
+
+        if (card.Reversed === true || card.Reversed === "true") {
+            cardImage.style.transform = 'rotate(180deg)';
+            cardImage.style.transition = 'transform 1s ease-in-out';
+        }
+
+        const dateDisplay = document.createElement('h6');
+        dateDisplay.textContent = new Date().toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+        const cardName = document.createElement('h5');
+        cardName.textContent = card.Name;
+
+        const cardDescription = document.createElement('p');
+        cardDescription.textContent = card.Description;
+
+        colDiv.appendChild(cardImage);
+        colDiv.appendChild(dateDisplay);
+        colDiv.appendChild(cardName);
+        colDiv.appendChild(cardDescription);
+        rowDiv.appendChild(colDiv);
+        tarotResults.appendChild(rowDiv); // Append only once!
+        }
+    };
+
+    function displayThreeCards() {
+     if (threeBtn && tarotResults) {     
+        tarotResults.innerHTML = ''; 
+
+        const rowDiv = document.createElement('div');
+        rowDiv.classList.add('row', 'justify-content-center');
+
+        for (let i = 0; i < 3; i++) {
+            const randomIndex = Math.floor(Math.random() * data.tarot.length);
+            const randomCard = data.tarot[randomIndex];
+
+            const cardCol = document.createElement('div');
+            cardCol.classList.add('col-md-4', 'text-center', 'card-wrapper');
+
+            const cardImage = document.createElement('img');
+            cardImage.src = randomCard.Img;
+            cardImage.alt = randomCard.Name;
+            cardImage.classList.add('img-fluid', 'tarot-card');
+
+            if (randomCard.Reversed === true || randomCard.Reversed === "true") {
+                cardImage.style.transform = 'rotate(180deg)';
+                cardImage.style.transition = 'transform 1s ease-in-out';
+            }
+
+            const cardName = document.createElement('h5');
+            cardName.textContent = randomCard.Name;
+
+            const cardDescription = document.createElement('p');
+            cardDescription.textContent = randomCard.Description;
+
+            cardCol.appendChild(cardImage);
+            cardCol.appendChild(cardName);
+            cardCol.appendChild(cardDescription);
+            rowDiv.appendChild(cardCol);
+        }
+
+        tarotResults.appendChild(rowDiv);
+    }};
+
+    todayBtn.addEventListener('click', () => {
+        const randomIndex = Math.floor(Math.random() * data.tarot.length);
+        const randomCard = data.tarot[randomIndex];
+        displaySingleCard(randomCard);
+    });
+
+    threeBtn.addEventListener('click', displayThreeCards);
+});
+
 
 </script>
 
 <style>
+.tarot-card {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+}
 
+.card-wrapper {
+    max-width: 300px;
+    margin-bottom: 20px;
+}
 
-    .reversedCard {
-          width: 200px;
-        transform: rotate(180deg); /* Rotate the image by 180 degrees */
-        transition: transform 5s ease-in-out; /* Smooth transition */
-        border: 5px solid red; /* Temporary test style */
-      }
+.tarotSection{
+    padding: 10px;
+}
+ 
+.buttons{
+    margin-bottom: 50px;
+}
     </style>
     
+
+
+
