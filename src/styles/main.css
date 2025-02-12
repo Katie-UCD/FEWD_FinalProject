@@ -10,16 +10,7 @@ body{
 }
 
 /*Typogrphy start */
-h1{
-	font-family: "Katibeh", serif;
-	color: var(--orange);
-	font-size: 6em;
-	text-align: left;
-	line-height: 0.8em;
-	position: relative;
-	top: 20px;
-	
-}
+
 h2 {
 	font-family: "oswald";
 	font-size: 2em;
