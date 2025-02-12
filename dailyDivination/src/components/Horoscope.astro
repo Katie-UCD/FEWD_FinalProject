@@ -35,21 +35,20 @@ try {
 
 
 ---
-<button class="horoscopeBtn horoscope-item" data-name={dataName}>
+    <div class="row">
         <div class="col">
             <Image src={resolvedImage()} alt={altText} />
         </div>
        
-            <div class=" selectedHoroscope">
+            <div class="col">
                 <h5>{name}</h5>
                 <h6>{dates}</h6>
                 <p class="horoscopeDes"> Element: {element}</p>
                 <p class="horoscopeDes"> Planet: {planet}</p>
                 <p class="horoscopeReturn">{horoscope}</p>
             </div>
-    </button>
-
-
+   
+        </div>
 
 
 <style>

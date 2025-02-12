@@ -99,27 +99,21 @@ p{
 
 /*header end */
 
-/* Horoscope Start
+/* Horoscope Start*/
 
-/* Hide/show horoscope detail section */
-.selectedHoroscope{
-	display: none;
-}
-
-.activeHoroscope{
-	display: block;
-}
-.horoscopeBtn{
-	cursor: pointer;
-	background-color: transparent;
-	border: 0px;
-    
+.accordion-item {
+  background-color: var(--cream);
+  border: 1px solid var(--purple);
 }
 
-.horoscopeBtn:hover{
-  transition: opacity 0.5s;
-  opacity: 0.5;
-}
+.accordion-button {
+	background-color: var(--cream);
+  }
+
+  .accordion-button:not(.collapsed){
+	background-color: var(--brown);
+  }
+
 /* Horoscope end
 
 
@@ -185,10 +179,6 @@ p{
 	background-color: var(--cream);
 }
 
-.datePicker{
-	max-width: 50%;
-	margin: 0 auto;
-}
 label{
 	font-family: "oswald";
 	font-weight: 400;
@@ -222,3 +212,27 @@ label{
 
 
 /*Numerology end*/
+
+/*Footer Start*/
+
+footer{
+
+	padding: 20px; 
+	background-color:var(--brown); 
+	margin-top: 100px;
+}
+
+footer p{
+	font-size: 12px; color: var(--purple);
+	text-align: center;
+	padding: 20px;
+}
+
+footer h4{
+	text-align: center;
+	margin: 10px;
+}
+
+/*Footer Start*/
+
+

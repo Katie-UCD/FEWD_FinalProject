@@ -1,5 +1,7 @@
 ---
 import HoroscopeRows from "./HoroscopeRows.astro"
+import Horoscope from "../components/Horoscope.astro"
+
 ---
 
 
@@ -12,17 +14,13 @@ import HoroscopeRows from "./HoroscopeRows.astro"
         </div>	
 
     <div class="container horoscopeResult" id="horoscopeResult">
+ 
     </div>    
  
   <HoroscopeRows/>
 
-
-
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-
-      
-
       const horoscopeButtons = document.querySelectorAll('.horoscopeBtn');
       const resultContainer = document.querySelector('#horoscopeResult');
   
@@ -38,27 +36,11 @@ import HoroscopeRows from "./HoroscopeRows.astro"
               if (selectedHoroscope) {
                   selectedHoroscope.classList.add('activeHoroscope');
               }
-  
-              // Get the sign from the button's data attribute
-              const sign = button.getAttribute('data-sign');
-  
-              // Dynamically load and display the Horoscope component for the selected sign
-              const horoscopeComponent = document.createElement('div');
-              horoscopeComponent.classList.add('horoscopeDetails');
-  
-              // Insert the Horoscope component into the result container
-              // You'll likely need to render the Horoscope component dynamically based on the selected sign
-              horoscopeComponent.innerHTML = `
-                  <h3>Daily Horoscope for ${sign}</h3>
-                  <p>Here, the horoscope data for ${sign} will be inserted dynamically by Horoscope.astro.</p>
-              `;
-              
-              // Clear previous content and add the new horoscope
-              resultContainer.innerHTML = '';
-              resultContainer.appendChild(horoscopeComponent);
+      
           });
       });
   });
+  
   
   </script>
   

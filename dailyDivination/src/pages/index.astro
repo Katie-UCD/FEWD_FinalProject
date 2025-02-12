@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro"
 import "../styles/main.css"
 import HoroscopePage from "../components/HoroscopePage.astro"
-import TarotPage from "../components/tarotPage.astro";
+import TarotPage from "../components/TarotPage.astro"
 
 const pathname = new URL(Astro.request.url).pathname;
 console.log(pathname); // This works in both static and dynamic environments
@@ -30,6 +30,13 @@ console.log(pathname); // This works in both static and dynamic environments
 	
 	<HoroscopePage/>
 	<TarotPage/>
+	<footer>
+		<h4>Daily Divination &copy; 2025</h4>
+		<p>
+			Disclaimer: Daily Divination takes no responsibility for any predictions that may or may not come true.  
+			If your fortune is eerily accurate, we claim full credit. If it’s wildly off, you probably read it wrong.
+		</p>
+	</footer>
 	
 </body>
 </html>

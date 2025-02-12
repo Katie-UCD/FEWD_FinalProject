@@ -264,30 +264,7 @@
             "Description": "Completion or fulfillment might be delayed, leading to feelings of incompleteness or frustration. The World reversed indicates that you could be facing unfinished business, setbacks in achieving your goals, or a lack of closure. It\u2019s essential to address any lingering issues, stay patient, and continue striving toward the culmination of your efforts."
             ,"Reversed": "true"
         }
-    ],
-
-    "horoscope":[
-        {
-            "dataName":"Aries",
-            "imagePath":"aries.svg",
-            "altText":"Aries",
-            "name" :"Aries",
-            "description":"https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign:Aries&day:TODAY",
-            "element":"Fire",
-           "planet": "Mars",
-           "dates": "March 21 – April 19"
-        },
-        {
-            "dataName":"Taurus",
-            "imagePath":"taurus.svg",
-            "altText": "Taurus",
-            "name" :"Taurus",
-            "description":"https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign:Taurus&day:TODAY",
-            "element": "Earth",
-           "planet": "Venus",
-           "dates" : "April 20 – May 20"
-        }
-
     ]
+
 
 }

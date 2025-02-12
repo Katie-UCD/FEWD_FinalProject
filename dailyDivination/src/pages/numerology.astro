@@ -2,7 +2,7 @@
 import Header from "../components/Header.astro"
 import "../styles/main.css"
 import Numbers from '../components/Numbers.astro';
-
+import Footer from "../components/Footer.astro";
 
 ---
 
@@ -97,7 +97,7 @@ import Numbers from '../components/Numbers.astro';
             description="Life Path 33 individuals are rare and are known for their selfless service and unconditional love. They are deeply spiritual and compassionate, often called to heal and guide others. With their heightened empathy and creative energy, they can be profound teachers and role models. Their challenge is to balance personal needs with their calling. At their best, they inspire transformation and healing on a global scale."
             />
     </div>
-
+    <Footer/>
 </body>
 </html>
 
@@ -210,6 +210,12 @@ document.addEventListener('DOMContentLoaded', function () {
       background-image: url(../assets/numPhasebkgd.svg);
       background-repeat:no-repeat;
       background-position: center center;
+    }
+
+    @media (min-width: 1200px) {
+        .datePicker {
+      max-width: 50%;
+        }
     }
 
 

@@ -50,14 +50,16 @@ function getImageForMoonPhase(phase: number): string {
     .nav-link, a {
         font-family: "Katibeh", serif;
         color: var(--cream);
-        font-size: 1.5em;
+        font-size: 2em;
     }
     .logo {
         color: var(--brown);
-        font-size: 3em;
         position: relative;
-        top: 20px;
+        top: 5px;
+       
     }
+  
+
     .navbar {
         background-color: var(--orange);
     }
@@ -67,12 +69,41 @@ function getImageForMoonPhase(phase: number): string {
         padding: 50px;
     }
 
+    h1{
+	font-family: "Katibeh", serif;
+	color: var(--orange);
+	font-size: 6em;
+	text-align: left;
+	line-height: 0.8em;
+	position: relative;
+	top: 20px;
+	
+}
 	/* CSS for active page */
 	.active{
 		text-decoration: underline var(--brown);
 		color: var(--brown)
 	}
 
+
+    /*media styles*/
+    @media (min-width: 1200px) {
+        .nav-link, a {
+        font-family: "Katibeh", serif;
+        color: var(--cream);
+        font-size: 3em;
+    }
+        .logo {
+        font-size: 6em;
+        color: var(--brown);
+        position: relative;
+        top: 5px;
+        }
+        .active{
+		text-decoration: underline var(--brown);
+		color: var(--brown)
+	}
+    }
 	
 </style>
 
