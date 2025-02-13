@@ -30,7 +30,7 @@ interface TarotCard {
     Reversed: boolean | string;
 }
 
-fetch('db.json')
+fetch('https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/db.json')
   .then(response => response.json())
   .then((data: { tarot: TarotCard[] }) => { 
     const todayBtn = document.getElementById('todayBtn')as HTMLButtonElement | null;

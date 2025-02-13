@@ -1,13 +1,8 @@
 ---
 import Horoscope from "./Horoscope.astro"
 import { Image } from 'astro:assets';
-import aquarius from '../assets/horoscopes/aquarius.svg';
-
-
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/horoscopes/*.{jpeg,jpg,png,gif,svg}');
-
-
 ---
 
 <div class="accordion" id="accordionExample">
@@ -309,4 +304,4 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/horosco
 
 
 
-<style>
+</style>
