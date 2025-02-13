@@ -5,19 +5,18 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
 
 // Function to resolve the image path
-async function getImageForMoonPhase(phase: number): Promise<string> {
-	if (phase === 0) return '/src/assets/moon/new.png';
-    if (phase >= 0.1 && phase < 0.24) {
-        const imgModule = await images['/src/assets/moon/waxingCrescent.png']();
-        return imgModule.default.src;
-    }
-	if (phase === 0.25) return '/src/assets/moon/firstQrtr.png';
+function getImageForMoonPhase(phase: number): string {
+	if (phase ==0) return '/src/assets/moon/new.png';
+    if (phase >= 0.1 && phase < 0.24) return '/src/assets/moon/waxingCrescent.png';
+	if (phase ==0.25) return '/src/assets/moon/firstQrtr.png';
     if (phase >= 0.26 && phase < 0.4) return '/src/assets/moon/waxingGibbous.png';
-	if (phase === 0.5) return '/src/assets/moon/full.png';
+	if (phase ==0.5) return '/src/assets/moon/full.png';
     if (phase >= 0.6 && phase < 0.74) return '/src/assets/moon/waningGibbous.png';
-	if (phase === 0.75) return '/src/assets/moon/lastQrtr.png';
+	if (phase ==0.75) return '/src/assets/moon/lastQrtr.png';
     return '/src/assets/moon/waningCrescent.png';
-};
+}
+
+
 ---
 <!-- Nav bar start -->
 <nav class="navbar navbar-expand-lg navbar-light py-0 sticky-top">
@@ -36,7 +35,7 @@ async function getImageForMoonPhase(phase: number): Promise<string> {
 <div class="container text-center header">
     <div class="row">
         <div class="col">
-			<Image id="moonImage" src={imgModule} alt="Current Moon Phase" width="200px" />
+			<img id="moonImage" src={getImageForMoonPhase(0)} alt="Current Moon Phase" width="200px" />
         </div>
         <div class="col-6 align-self-center">
             <h1 id="moonPhaseName">Loading...</h1>
@@ -184,16 +183,15 @@ async function init() {
 	}
 
 const pathname = window.location.pathname;
-	console.log("Client-side Pathname:", pathname); // Works in the browser
 
-	if (pathname === "/moonPhases"){
+	if (pathname === "moonPhases"){
 		const moonPageLink = document.getElementById("moonPhasePage");
 		if(moonPageLink){
 		moonPageLink.classList.add("active");
 		}
 	
 	}
-	else if (pathname === "/numerology"){
+	else if (pathname === "numerology"){
 		const numerologyPageLink = document.getElementById("numerologyPage");
 		if(numerologyPageLink){
 		numerologyPageLink.classList.add("active");
