@@ -6,14 +6,29 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
 ---
 <!-- Nav bar start -->
-<nav class="navbar navbar-expand-lg navbar-light py-0 sticky-top">
+<!-- Nav Bar Start -->
+<nav class="navbar navbar-expand-md sticky-top bg-orange">
     <div class="container">
-		<a class="nav-link" id="moonPhasePage" href="/dailyDivination/moonPhases">Moon Phases</a>
-        <a class="nav-link  logo" id="logo" href="/dailyDivination/">Daily Divination</a>
-		<a class="nav-link" id="numerologyPage" href="/dailyDivination/numerology">Numerology</a>
-
+        <ul class="nav w-100 d-flex justify-content-between text-center">
+            <li class="nav-item flex-grow-1">
+                <a class="nav-link" id="moonPhasePage" href="/dailyDivination/moonPhases">Moon Phases</a>
+            </li>
+            <li class="nav-item flex-grow-1">
+                <a class="nav-link navbar-brand logo" id="logo" href="/dailyDivination/">Daily Divination</a>
+            </li>
+            <li class="nav-item flex-grow-1">
+                <a class="nav-link" id="numerologyPage" href="/dailyDivination/numerology">Numerology</a>
+            </li>
+        </ul>
     </div>
 </nav>
+
+
+
+
+
+
+
 <!-- Nav end -->
 
 
@@ -21,8 +36,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 <!-- Header start -->
 <div class="container text-center header">
     <div class="row">
-        <div class="col">
-			<img id="moonImage" src="" alt="Current Moon Phase" width="200px" />
+        <div class="col-3">
+			<img id="moonImage" src="" alt="Current Moon Phase" />
         </div>
         <div class="col-6 align-self-center">
             <h1 id="moonPhaseName">Loading...</h1>
@@ -34,22 +49,28 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
 <style>
     /* Nav CSS */
-    .nav-link, a {
-        font-family: "Katibeh", serif;
-        color: var(--cream);
-        font-size: 2em;
-    }
-    .logo {
-        color: var(--brown);
-        position: relative;
-        top: 5px;
-       
-    }
-  
-
     .navbar {
-        background-color: var(--orange);
-    }
+    background-color: var(--orange);
+    padding: 10px 0;
+}
+
+.nav {
+    font-size: 3rem; /* Adjust size */
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-link {
+    font-family: "Katibeh", serif;
+    color: var(--cream);
+    font-weight: bold;
+}
+.logo {
+    color: var(--brown);
+    font-size: 4rem; /* Make the center logo slightly bigger */
+}
 
     /* Header CSS */
     .header {
@@ -63,7 +84,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 	text-align: left;
 	line-height: 0.8em;
 	position: relative;
-	top: 20px;
+	
 	
 }
 	/* CSS for active page */
@@ -73,24 +94,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 	}
 
 
-    /*media styles*/
-    @media (min-width: 1200px) {
-        .nav-link, a {
-        font-family: "Katibeh", serif;
-        color: var(--cream);
-        font-size: 3em;
-    }
-        .logo {
-        font-size: 6em;
-        color: var(--brown);
-        position: relative;
-        top: 5px;
-        }
-        .active{
-		text-decoration: underline var(--brown);
-		color: var(--brown)
-	}
-    }
 	
 </style>
 
@@ -131,28 +134,28 @@ async function init() {
 	if (moonPhaseName && moonImage) {	
         if (moonPhase == 0) {
             moonPhaseName.textContent = "New Moon";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/new.png";
 		}else if (moonPhase >= 0.1 && moonPhase < 0.24) {
             moonPhaseName.textContent = "Waxing Crescent";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/waxingCrescent.png";
 		} else if (moonPhase == 0.25) {
             moonPhaseName.textContent = "First Quarter";
             moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
         } else if (moonPhase >= 0.26 && moonPhase < 0.4) {
             moonPhaseName.textContent = "Waxing Gibbous";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/waxingGibbous.png";
 		} else if (moonPhase == 0.5) {
             moonPhaseName.textContent = "Full Moon";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/fullMoon.png";
         } else if (moonPhase >= 0.6 && moonPhase < 0.74) {
             moonPhaseName.textContent = "Waning Gibbous";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/waningGibbous.png";
 		} else if (moonPhase == 0.75) {
             moonPhaseName.textContent = "Last Quarter";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/lastQrtr.png";
         } else {
             moonPhaseName.textContent = "Waning Crescent";
-            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/firstQrtr.png";
+            moonImage.src = "https://raw.githubusercontent.com/Katie-UCD/dailyDivination/refs/heads/main/images/moon/waningCrescent.png";
         }
     }} catch (error) {
     console.error('Error fetching moon phase data:', error);
@@ -171,14 +174,15 @@ async function init() {
 
 const pathname = window.location.pathname;
 
-	if (pathname === "/dailyDivination/moonPhases"){
+	if (pathname === "https://katie-ucd.github.io/dailyDivination/moonPhases/"){
 		const moonPageLink = document.getElementById("moonPhasePage");
 		if(moonPageLink){
 		moonPageLink.classList.add("active");
+        
 		}
 	
 	}
-	else if (pathname === "/dailyDivination/numerology"){
+	else if (pathname === "https://katie-ucd.github.io/dailyDivination/numerology/"){
 		const numerologyPageLink = document.getElementById("numerologyPage");
 		if(numerologyPageLink){
 		numerologyPageLink.classList.add("active");

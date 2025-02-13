@@ -73,7 +73,7 @@ p{
 /*typograpgy end */
 
 /* header start */
-.sectionHeader{
+.sectionHeader {
 	padding: 50px;
 	background-color: var(--purple);
 }
@@ -139,9 +139,6 @@ p{
 	
 }
 
-.reversed img{
-	transform: rotate(180deg);
-}
 /*Tarot end */
 
 /*Numerology start*/
@@ -224,6 +221,6 @@ footer h4{
 	margin: 10px;
 }
 
-/*Footer Start*/
+/*Footer End*/
 
 
