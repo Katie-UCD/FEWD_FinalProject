@@ -1,8 +1,7 @@
 ---
 import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.{jpeg,jpg,png,gif}');
-
-
 
 
 ---
@@ -23,7 +22,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 <div class="container text-center header">
     <div class="row">
         <div class="col">
-			<img id="moonImage" src={getImageForMoonPhase(0)} alt="Current Moon Phase" width="200px" />
+			<Image id="moonImage" src={images[`/src/assets/moon/new.png`]()} alt="Current Moon Phase"/>
         </div>
         <div class="col-6 align-self-center">
             <h1 id="moonPhaseName">Loading...</h1>
@@ -92,6 +91,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 		color: var(--brown)
 	}
     }
+
+    #moonImage{
+        width: 200px;
+        height: auto;
+    }
 	
 </style>
 
@@ -132,7 +136,7 @@ async function init() {
 	if (moonPhaseName && moonImage) {	
         if (moonPhase == 0) {
             moonPhaseName.textContent = "New Moon";
-            moonImage.src = "/src/assets/moon/new.png";
+            moonImage.src = {images[`/src/assets/moon/new.png`]()};
 		}else if (moonPhase >= 0.1 && moonPhase < 0.24) {
             moonPhaseName.textContent = "Waxing Crescent";
             moonImage.src = "/src/assets/moon/waxingCrescent.png";
