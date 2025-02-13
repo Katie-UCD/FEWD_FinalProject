@@ -21,7 +21,7 @@ h2 {
 h3{
 	font-family: "Katibeh", serif;
 	color: var(--brown);
-	font-size: 5.5em;
+	font-size: 5em;
 	text-align: left;
 	line-height: 0.8em;
 	position: relative;
@@ -72,9 +72,10 @@ p{
 
 /*typograpgy end */
 
+
 /* header start */
 .sectionHeader {
-	padding: 50px;
+	padding: 50px 0px;
 	background-color: var(--purple);
 }
 

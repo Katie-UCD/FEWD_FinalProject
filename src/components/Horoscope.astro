@@ -13,7 +13,7 @@ interface Props {
 
    dataName: string
 }
-const { imagePath, altText, name, description, element, planet, dates, dataName } = Astro.props;
+const { imagePath, altText, name, element, planet, dates } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/horoscopes/*.{jpeg,jpg,png,gif,svg}');
 
@@ -51,13 +51,3 @@ try {
         </div>
 
 
-<style>
-/*make images responsive */
-     .col img{ 
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure it doesn't exceed its container */
-}
-
-
-</style>
