@@ -4,18 +4,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
 
 
-// Function to resolve the image path
-function getImageForMoonPhase(phase: number): string {
-	if (phase ==0) return '/src/assets/moon/new.png';
-    if (phase >= 0.1 && phase < 0.24) return '/src/assets/moon/waxingCrescent.png';
-	if (phase ==0.25) return '/src/assets/moon/firstQrtr.png';
-    if (phase >= 0.26 && phase < 0.4) return '/src/assets/moon/waxingGibbous.png';
-	if (phase ==0.5) return '/src/assets/moon/full.png';
-    if (phase >= 0.6 && phase < 0.74) return '/src/assets/moon/waningGibbous.png';
-	if (phase ==0.75) return '/src/assets/moon/lastQrtr.png';
-    return '/src/assets/moon/waningCrescent.png';
-}
-
 
 ---
 <!-- Nav bar start -->
