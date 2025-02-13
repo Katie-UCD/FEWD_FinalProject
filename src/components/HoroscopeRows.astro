@@ -1,6 +1,7 @@
 ---
 import Horoscope from "./Horoscope.astro"
-
+import { Image } from 'astro:assets';
+import aries from '../assets/horoscopes/aries.svg';
 ---
 
 <div class="accordion" id="accordionExample">
@@ -8,7 +9,7 @@ import Horoscope from "./Horoscope.astro"
     <h2 class="accordion-header" id="headingOne">
        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
       
-      <img src="src/assets/horoscopes/aries.svg"/>
+        <Image src={aries} alt="Aries" />
       <h1>Aries</h1>
       </button>
     </h2>
