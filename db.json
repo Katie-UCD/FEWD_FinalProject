@@ -1,265 +1,265 @@
 {
     "tarot":[
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/death.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/death.svg",
             "Name": "Death",
             "Description": "A powerful transformation is taking place, clearing the way for new beginnings. Death symbolizes the end of one chapter and the rebirth of another. This is a time to release what no longer serves you and embrace change with courage.",
             "Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/death.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/death.svg",
             "Name": "Death (Reversed)",
             "Description": "Fear of change or an inability to let go of the past may be preventing transformation. Death reversed indicates stagnation, resisting inevitable endings, or clinging to old habits. It\u2019s essential to embrace the changes that come your way, release what no longer serves you, and allow new beginnings to emerge.",
             "Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/judgement.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/judgement.svg",
             "Name": "Judgment",
             "Description": "A moment of awakening is upon you, offering a chance for self-reflection and renewal. Judgment calls you to assess your life\u2019s path and align with your higher purpose. This is a time to release the past and step into a brighter future."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/judgement.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/judgement.svg",
             "Name": "Judgment (Reversed)",
             "Description": "Avoiding self-reflection or resisting personal growth may be hindering your progress. Judgment reversed suggests that you might be reluctant to assess your actions, leading to missed opportunities for renewal. It\u2019s important to embrace introspection, acknowledge past mistakes, and allow yourself the chance to evolve and transform."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/justice.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/justice.svg",
             "Name": "Justice",
             "Description": "Balance and fairness will prevail in your current situation. Justice calls for honesty, accountability, and ethical decisions. This is a time to seek the truth and act with integrity to ensure that outcomes are just and fair."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/justice.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/justice.svg",
             "Name": "Justice (Reversed)",
             "Description": "Issues of fairness, imbalance, or dishonesty might be influencing your situation. Justice reversed warns of potential bias, legal complications, or unethical behavior. It\u2019s important to seek truth, act with integrity, and ensure that your decisions are balanced and just to restore equilibrium."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/strength.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/strength.svg",
             "Name": "Strength",
             "Description": "You have the inner strength and resilience to face any challenge. Strength encourages you to approach difficulties with patience, compassion, and grace. This is a time to trust in your ability to overcome obstacles through quiet confidence."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/strength.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/strength.svg",
             "Name": "Strength (Reversed)",
             "Description": "Inner strength and confidence may be waning, leading to self-doubt or fear. Strength reversed suggests that you might be struggling to cope with challenges or relying too much on force rather than compassion. It\u2019s a time to rebuild your self-esteem, approach situations with patience, and harness your true inner power."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/temperance.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/temperance.svg",
             "Name": "Temperance",
             "Description": "Balance and harmony are within reach if you approach life with moderation. Temperance encourages you to blend opposing forces and find a middle path. This is a time for patience and creating equilibrium in your endeavors."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/temperance.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/temperance.svg",
             "Name": "Temperance (Reversed)",
             "Description": "Imbalance or excess in your life might be causing disruptions. Temperance reversed suggests that you could be struggling to find harmony, practicing too much self-restraint, or indulging in excess. It\u2019s important to seek moderation, restore balance, and create a sense of equilibrium in your endeavors."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/chariot.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/chariot.svg",
             "Name": "The Chariot",
             "Description": "Victory is within your grasp, but it will require focus and determination. The Chariot symbolizes triumph through willpower and control over opposing forces. This is a time to stay disciplined and steer your path with confidence toward your goals."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/chariot.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/chariot.svg",
             "Name": "The Chariot (Reversed)",
             "Description": "You might be experiencing a lack of direction or facing obstacles that hinder your progress. The Chariot reversed warns against losing control or allowing conflicting forces to derail your goals. It\u2019s essential to regain your focus, strengthen your willpower, and navigate challenges with determination and resilience."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/devil.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/devil.svg",
             "Name": "The Devil",
             "Description": "Awareness of your attachments and limitations is key at this time. The Devil highlights temptations or patterns that may be holding you back, yet it reminds you that liberation is possible. This is a time to confront what binds you and reclaim your power."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/devil.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/devil.svg",
             "Name": "The Devil (Reversed)",
             "Description": "You may be breaking free from unhealthy attachments or overcoming limitations. The Devil reversed indicates liberation from addictions, fear, or negative patterns. It\u2019s a time to reclaim your power, recognize your true potential, and embrace freedom by addressing the sources of your bondage."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/emporer.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/emporer.svg",
             "Name": "The Emperor",
             "Description": "Stability and structure are key themes in your life right now. The Emperor brings the energy of discipline, leadership, and strategic thinking. This is a time to take control, establish clear boundaries, and build a solid foundation for your goals."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/emporer.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/emporer.svg",
             "Name": "The Emperor (Reversed)",
             "Description": "Authority and structure in your life might be unstable or overly rigid. The Emperor reversed can signify challenges with leadership, control issues, or a lack of discipline. It\u2019s important to reassess your approach to authority, embrace flexibility, and ensure that your desire for control isn\u2019t hindering your progress."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/empress.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/empress.svg",
             "Name": "The Empress",
             "Description": "Abundance and creativity flow around you, encouraging you to nurture yourself and those you care about. The Empress symbolizes growth, beauty, and the fulfillment that comes from cultivating a loving environment. This is a time to embrace your feminine energy and celebrate life\u2019s natural rhythms."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/empress.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/empress.svg",
             "Name": "The Empress (Reversed)",
             "Description": "Creativity and abundance may be blocked, leading to feelings of stagnation or neglect. The Empress reversed suggests that you might be overindulging or, conversely, neglecting self-care and relationships. It\u2019s a time to find balance, nurture yourself, and address any areas where you may be withholding love or support."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/fool.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/fool.svg",
             "Name": "The Fool",
             "Description": "A new journey awaits you, brimming with possibilities and untapped potential. The Fool encourages you to take a leap of faith, trust in the universe, and embrace the unknown with an open heart. This is a time to follow your instincts and step forward boldly, unburdened by fear or doubt."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/fool.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/fool.svg",
             "Name": "The Fool (Reversed)",
             "Description": "You may be feeling hesitant or fearful about embarking on a new journey. The Fool reversed suggests that recklessness or a lack of preparation could lead to setbacks. It's a time to reassess your plans, ensure you have considered all potential risks, and avoid impulsive decisions. Take a moment to gather your thoughts before moving forward."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hangedMan.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hangedMan.svg",
             "Name": "The Hanged Man",
             "Description": "Pause and surrender to gain a new perspective. The Hanged Man encourages patience and the willingness to let go of control to see things differently. This is a time for reflection and allowing life to unfold naturally."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hangedMan.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hangedMan.svg",
             "Name": "The Hanged Man (Reversed)",
             "Description": "Resistance to change or an inability to see things from a different perspective may be holding you back. The Hanged Man reversed suggests that you might be stuck in a state of limbo or unwilling to make necessary sacrifices. It\u2019s a time to embrace flexibility, let go of outdated beliefs, and approach situations with a fresh outlook."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hermit.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hermit.svg",
             "Name": "The Hermit",
             "Description": "Take a step back and seek solitude to gain clarity and wisdom. The Hermit represents introspection and the guidance that comes from within. This is a time to retreat from distractions and focus on your personal journey of growth."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hermit.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hermit.svg",
             "Name": "The Hermit (Reversed)",
             "Description": "Isolation or an unwillingness to seek guidance might be affecting your clarity and wisdom. The Hermit reversed indicates that you could be withdrawing excessively or ignoring the need for introspection. It\u2019s important to reach out for support, embrace solitude constructively, and allow yourself time to reflect and gain insight."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hierophant.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hierophant.svg",
             "Name": "The Hierophant",
             "Description": "Tradition and wisdom hold the answers you seek. The Hierophant suggests learning from established systems, seeking guidance from mentors, or reconnecting with your spiritual or cultural roots. This is a time to honor shared values and embrace teachings that offer clarity."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/hierophant.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/hierophant.svg",
             "Name": "The Hierophant (Reversed)",
             "Description": "You may be feeling confined by traditional structures or questioning established beliefs. The Hierophant reversed encourages you to think independently and challenge the status quo. It\u2019s a time to seek your own spiritual or philosophical path rather than adhering strictly to societal expectations."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/highPriestess.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/highPriestess.svg",
             "Name": "The High Priestess",
             "Description": "Trust your inner voice, as the answers you seek lie within. The High Priestess invites you to connect with your intuition and explore the mysteries of your subconscious. This is a time for reflection and tuning in to your spiritual insights."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/highPriestess.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/highPriestess.svg",
             "Name": "The High Priestess (Reversed)",
             "Description": "Your intuition might be clouded, or you could be ignoring your inner voice. The High Priestess reversed indicates secrets being kept or a disconnect from your subconscious mind. It\u2019s important to take time for self-reflection and to trust your instincts, as there may be hidden truths that need to be uncovered."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/lovers.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/lovers.svg",
             "Name": "The Lovers",
             "Description": "This card points to harmony, meaningful connections, and alignment in your relationships or personal values. The Lovers signify a choice, often one that aligns with your higher self. It is a time to celebrate love and trust in the bonds that uplift you."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/lovers.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/lovers.svg",
             "Name": "The Lovers (Reversed)",
             "Description": "Harmony in relationships might be disrupted, or you could be facing difficult choices. The Lovers reversed suggests disharmony, misalignment of values, or conflicts that need resolution. It\u2019s important to communicate openly and address any underlying issues to restore balance and understanding in your connections."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/magician.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/magician.svg",
             "Name": "The Magician",
             "Description": "You are in a position of power, with all the tools at your disposal to turn dreams into reality. The Magician urges you to focus your energy and channel your creativity into purposeful action. This is a time for manifesting your goals and aligning with your highest potential."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/magician.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/magician.svg",
             "Name": "The Magician (Reversed)",
             "Description": "There may be a sense of untapped potential or a struggle to manifest your desires. The Magician reversed warns against manipulation, deceit, or using your skills for the wrong purposes. It\u2019s essential to focus on aligning your actions with your true intentions and overcoming any distractions that prevent you from fully utilizing your abilities."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/moon.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/moon.svg",
             "Name": "The Moon",
             "Description": "Your intuition is heightened, and the mysteries of your subconscious are calling you. The Moon represents dreams, illusions, and the power of your inner world. This is a time to trust your instincts and explore what lies beneath the surface."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/moon.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/moon.svg",
             "Name": "The Moon (Reversed)",
             "Description": "Confusion, deception, or unresolved fears may be clouding your judgment. The Moon reversed suggests that illusions are being dispelled, but it can also indicate lingering uncertainties or hidden truths coming to light. It\u2019s important to seek clarity, trust your intuition, and navigate through uncertainties with caution."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/star.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/star.svg",
             "Name": "The Star",
             "Description": "Hope and inspiration guide you toward healing and renewal. The Star encourages you to trust in the universe and remain optimistic as you move forward. This is a time to connect with your inner light and let it shine brightly."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/star.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/star.svg",
             "Name": "The Star (Reversed)",
             "Description": "Hope and inspiration might feel diminished, leading to feelings of despair or lack of direction. The Star reversed warns of self-doubt, disconnection from your spiritual path, or difficulties in healing. It\u2019s essential to reconnect with your inner light, seek inspiration, and foster a sense of optimism to guide you forward."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/sun.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/sun.svg",
             "Name": "The Sun",
             "Description": "Joy, success, and vitality are shining on your path. The Sun symbolizes clarity, optimism, and the achievement of your goals. This is a time to embrace positivity, celebrate your accomplishments, and share your light with the world."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/sun.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/sun.svg",
             "Name": "The Sun (Reversed)",
             "Description": "Temporary setbacks or a lack of clarity might be casting shadows on your path. The Sun reversed indicates that while challenges are present, they are not permanent. It\u2019s a time to remain optimistic, seek solutions to obstacles, and focus on reigniting your inner joy and vitality to overcome any dimmed moments."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/tower.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/tower.svg",
             "Name": "The Tower",
             "Description": "A sudden shift or revelation is clearing away illusions and making room for growth. The Tower represents upheaval, but it also brings the opportunity to rebuild stronger foundations. This is a time to embrace change and trust in the process of transformation."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/tower.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/tower.svg",
             "Name": "The Tower (Reversed)",
             "Description": "Avoiding necessary change or experiencing prolonged upheaval may be impacting your stability. The Tower reversed suggests that you might be resisting transformation, leading to internal chaos or delayed revelations. It\u2019s important to face disruptions head-on, embrace the opportunity for growth, and allow foundational changes to occur."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/wheelOfFortune.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/wheelOfFortune.svg",
             "Name": "The Wheel of Fortune",
             "Description": "Change is on the horizon, and the wheel is turning in your favor. The Wheel of Fortune speaks of cycles, luck, and destiny aligning to bring new opportunities. This is a time to embrace the flow of life and trust in the process."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/wheelOfFortune.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/wheelOfFortune.svg",
             "Name": "The Wheel of Fortune (Reversed)",
             "Description": "Unfavorable changes or resistance to the natural flow of life may be present. The Wheel of Fortune reversed suggests that you might be experiencing setbacks, bad luck, or feeling stuck in a negative cycle. It\u2019s crucial to remain adaptable, accept that change is inevitable, and find ways to shift your perspective to overcome challenges."
             ,"Reversed": "true"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/world.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/world.svg",
             "Name": "The World",
             "Description": "Completion and fulfillment are within reach as you achieve a significant milestone. The World represents the successful conclusion of a journey and the wholeness that comes with it. This is a time to celebrate your accomplishments and look forward to new horizons."
             ,"Reversed": "null"
         },
         {
-            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/dailyDivination/images/tarot/world.svg",
+            "Img": "https://raw.githubusercontent.com/Katie-UCD/FEWD_FinalProject/refs/heads/main/images/tarot/world.svg",
             "Name": "The World (Reversed)",
             "Description": "Completion or fulfillment might be delayed, leading to feelings of incompleteness or frustration. The World reversed indicates that you could be facing unfinished business, setbacks in achieving your goals, or a lack of closure. It\u2019s essential to address any lingering issues, stay patient, and continue striving toward the culmination of your efforts."
             ,"Reversed": "true"
