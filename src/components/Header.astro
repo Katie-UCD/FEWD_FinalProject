@@ -29,10 +29,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 <!-- Header start -->
 <div class="container text-center header">
     <div class="row">
-        <div class="col">
-			<img id="moonImage" src="" alt="Current Moon Phase" class="img-fluid" width="200px" />
+        <div class="col align-self-center">
+			<img id="moonImage" src="" alt="Current Moon Phase" class="img-fluid" />
         </div>
-        <div class="col col-lg">
+        <div class="col col-lg align-self-center">
             <h1 id="moonPhaseName">Loading...</h1>
             <h2 id="dateDisplay">Loading...</h2>
         </div>
@@ -68,7 +68,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 @media (max-width: 768px) {
     .navbar {
         padding: 5px 0; /* Reduce vertical padding */
-        max-height: 60px;
+        max-height: 90px;
     }
 
     .nav-link {
@@ -93,7 +93,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
     }
     
    #moonImage{
-
+    padding: 20px;
     max-width: 100%; /* Ensures it never exceeds its container */
     height: auto; /* Keeps the aspect ratio */
    }
@@ -193,7 +193,7 @@ async function init() {
 
 const pathname = window.location.pathname;
 
-	if (pathname == "https://katie-ucd.github.io/dailyDivination/moonPhases/"){
+	if (pathname == "/dailyDivination/moonPhases/"){
 		const moonPageLink = document.getElementById("moonPhasePage");
 		if(moonPageLink){
 		moonPageLink.classList.add("active");
@@ -201,7 +201,7 @@ const pathname = window.location.pathname;
 		}
 	
 	}
-	else if (pathname == "https://katie-ucd.github.io/dailyDivination/numerology/"){
+	else if (pathname == "/dailyDivination/numerology/"){
 		const numerologyPageLink = document.getElementById("numerologyPage");
 		if(numerologyPageLink){
 		numerologyPageLink.classList.add("active");
