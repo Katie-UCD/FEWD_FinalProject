@@ -42,3 +42,7 @@ Welcome to [Daily Divination](https://katie-ucd.github.io/dailyDivination/), you
 
 Thanks to Gilberto for the lessons. And thanks to my husband for his love and support and always cleaning up dinner on Thursday evenings.
 
+
+## Shameless Plug
+
+If you would like to work with me, contact me at [https://katieflynndesign.com/]

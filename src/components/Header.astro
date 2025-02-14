@@ -29,10 +29,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 <!-- Header start -->
 <div class="container text-center header">
     <div class="row">
-        <div class="col-3 align-self-center">
+        <div class="col align-self-center">
 			<img id="moonImage" src="" alt="Current Moon Phase" class="img-fluid" />
         </div>
-        <div class="col-9 col-lg align-self-center">
+        <div class="col align-self-center">
             <h1 id="moonPhaseName">Loading...</h1>
             <h2 id="dateDisplay">Loading...</h2>
         </div>
@@ -80,7 +80,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
     /* Header CSS */
     .header {
-        padding: 50px;
+        padding: 20px;
     }
 
     h1{
@@ -93,17 +93,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
     }
     
    #moonImage{
-    padding: 20px;
+    
     max-width: 100%; /* Ensures it never exceeds its container */
     height: auto; /* Keeps the aspect ratio */
    }
 
-   @media (max-width: 768px) {
-    .col-3 {
-        width: 5%; /* Allow more space for the image */
-        text-align: center; /* Center the image */
-    }
-}
+  
+
 
 
 	/* CSS for active page */
