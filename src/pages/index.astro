@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro"
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-
+const title = "Daily Divination"
 
 const pathname = new URL(Astro.request.url).pathname;
 console.log(pathname); // This works in both static and dynamic environments
@@ -13,7 +13,7 @@ console.log(pathname); // This works in both static and dynamic environments
 
 ---
 
-	<Layout/>
+	<Layout title = {title}>
 	<Header/>
 	 <p class="tagline"> Dive into the cosmic energies and uncover the wisdom you need to navigate life with clarity and purpose. </p>
 
