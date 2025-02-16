@@ -27,7 +27,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 
 
 <!-- Header start -->
-<div class="container text-center header">
+<div class="container  header">
     <div class="row">
         <div class="col align-self-center">
 			<img id="moonImage" src="" alt="Current Moon Phase" class="img-fluid" />
@@ -61,21 +61,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
     font-weight: bold;
 }
 .logo {
-    color: var(--brown);
     font-size: 3rem; 
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        padding: 5px 0; /* Reduce vertical padding */
-        max-height: 100px;
-    }
-
-    .nav-link {
-        font-size: 1rem; /* Adjust font size */
-        padding: 5px 10px; /* Reduce link padding */
-    }
-}
 
 
     /* Header CSS */
@@ -107,6 +95,28 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/moon/*.
 		text-decoration: underline var(--brown);
 		color: var(--brown)
 	}
+
+/* media queries */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 5px 0; /* Reduce vertical padding */
+        max-height: 100px;
+    }
+
+    .nav-link {
+        font-size: 1rem; /* Adjust font size */
+        padding: 5px 10px; /* Reduce link padding */
+    }
+
+    h1{
+        font-size: 5em;
+    }
+
+    #dateDisplay{
+        font-size: 1.5em;
+    }
+}
 
 
 	
@@ -202,6 +212,14 @@ const pathname = window.location.pathname;
 		numerologyPageLink.classList.add("active");
 		}
 	}
+
+    if (pathname == "/dailyDivination/"){
+        const logoLink = document.getElementById("logo");
+        if(logoLink){
+            logoLink.style.color = "var(--brown)";
+
+        }
+    }
 }
 
 // Run the init function on page load
